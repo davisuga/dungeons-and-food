@@ -1,0 +1,21 @@
+body{
+	background-color: #292728;
+}
+
+nav{
+	background-color: #fff;
+	color: #292728;
+
+}
+#img {
+	height: 100px;
+	width: 100px;
+}
+nav{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+	font-size: 40px;
+	text-align: center;
+}
+#name{
+	float: inherit;
+}
