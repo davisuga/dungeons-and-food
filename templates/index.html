@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
 		<title>Dungeons and food</title>
-		<link rel="stylesheet" href={{ url_for('static', filename='css/materialize.css') }} />
+
+		<link rel="stylesheet" href={{ url_for('static', filename='css/materialize.min.css') }} />
+		<link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }} />
 		<link rel="stylesheet" href={{ url_for('static', filename='css/topStyle.css') }} />
 		<link rel="stylesheet" href={{ url_for('static', filename='css/index.css') }} />
-	
+		<link rel="stylesheet" href={{ url_for('static', filename='css/animate.css') }} />
+
 	</head>
 	<body>
-		<nav>
+		<nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark gradient-45deg-indigo-purple no-shadow">
 			<ul>
 				<li> <img id="logo" src={{ url_for('static', filename='images/food_icon.png') }} alt=""> </li>
 				<li id="name"> Dungeons and Food </li>
+
 			</ul>
 		</nav>
 	</body>
