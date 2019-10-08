@@ -1,85 +1,18 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head>
-	<title>Novo Brilho!</title>
-	<link rel="stylesheet" href={{ url_for('static', filename='css/materialize.min.css') }} />
-	<link rel="stylesheet" href={{ url_for('static', filename='css/home.css') }} />
-	<link rel="stylesheet" href={{ url_for('static', filename='css/topStyle.css') }} />
-
-</head>
-
-<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content black-text">
-	<li><a href="/account/orders">Meus pedidos</a></li>
-	<li><a href="/account/profile">Meu perfil</a></li>
-	<li class="divider"></li>
-	<li><a href="/logout">Deslogar</a></li>
-</ul>
-
-<nav class="white black-text">
-	<div class="nav-wrapper">
-		<a href="#" class="brand-logo black-text">Logo</a>
-		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a href="/cart">Seu Carrinho ({{noOfItems}}) </a></li>
-			<li><a href="/brincos">Brincos</a></li>
-			<li><a href="/aliancas">Alianças</a></li>
-			<li><a href="/aliancas">Pulseiras</a></li>
-			{% if not loggedIn %}
-			<li><a href="/loginForm">Sign Up!</a></li>
-			{% else %}
-			<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Olá, {{firstName}}<img src="" ></a> </li>
-			{% endif %} 
-		</ul> 
-	</div> 
-</nav>
-
-
-<div class="row">					
-	<div class="banner wrapper" background={{ url_for('static', filename='images/diamonds.webp') }}>
-		<img src="{{ url_for('static', filename='images/diamonds.webp') }}" alt="" id='diamonds' class="background">
-		<div class="content white-text" > <div id="lancamentos"> LANÇAMENTOS</div> <br>
-			<a class="waves-effect   white-text clean-button">
-				<span id="confira">Confira!</span>
-			</a>
-		</div>
-	</div>
-</div>
-
-
-
-	<div class="row white-text">
-		<div class="col s10 center offset-s1">
-				{% for data in itemData %}
-				{% for row in data %}
-			<div class="col s2 item" onclick="location.href='/productDescription?productId={{row[0]}}';" style="cursor: pointer;">
-					<div class="card transparent" href="/productDescription?productId={{row[0]}}">
-					  <div class="card-image"  href="/productDescription?productId={{row[0]}}">
-						<img src={{ url_for('static', filename='uploads/' + row[4]) }} id="itemImage" />
-						<span class="card-title"></span>
-					  </div>
-			
-					  <div class="card-content transparent  white-text">
-						<p>{{row[1]}}<br>{{row[2]}}</p>
-					  </div>
-
-					</div>
-				  </div>
-				{% endfor %}
-			{% endfor %}
-		</div>
-
-	</div>
-
-
-	<script type="text/javascript" src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
-
-	<script type="text/javascript" src="{{ url_for('static', filename = 'js/materialize.min.js') }}"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename = 'js/materialize.min.js') }}"></script>
-
-	<script type="text/javascript" src="{{ url_for('static', filename = 'js/main.js') }}"></script>
-
-
+	<head>
+		<title>Dungeons and food</title>
+		<link rel="stylesheet" href={{ url_for('static', filename='css/materialize.css') }} />
+		<link rel="stylesheet" href={{ url_for('static', filename='css/topStyle.css') }} />
+		<link rel="stylesheet" href={{ url_for('static', filename='css/index.css') }} />
+	
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li> <img id="logo" src={{ url_for('static', filename='images/food_icon.png') }} alt=""> </li>
+				<li id="name"> Dungeons and Food </li>
+			</ul>
+		</nav>
 	</body>
-
 </html>
